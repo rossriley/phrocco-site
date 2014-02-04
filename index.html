@@ -8,7 +8,18 @@
 <body>
     <div id="container">
         <div id="background"></div>
-        <h1>Phrocco ~ Literate Documentation for PHP</h1>
+        <div class="docs">
+            <h1>Phrocco ~ Literate Documentation for PHP</h1>
+            <p>Phrocco is a simple documentation generator for PHP files.</p>
+            <p>Based on the original, Docco for javascript this port produces similar HTML documents that display your comments intermingled with your code. All prose is passed through Markdown, and code is passed through Pygments to provide syntax highlighting.</p>
+            <h2>How to install?</h2>
+            <p>Easiest method is to install globally via composer</p>
+            <p><code>composer global require rossriley/phrocco:dev-master</code></p>
+            <p>Then you can either add your global composer binary folder to your path, if you haven't yet done this you can add this to your shell profile, assuming you're on a *nix style OS:</p>
+            <p><code>export PATH=$PATH:~/.composer/vendor/bin</code></p>
+            <p>If you don't want to do this, you can call the binary directly and run:</p>
+            <p><code>~/.composer/vendor/bin/phrocco</code></p>
+        </div>
     </div>
 </body>
 </html>
