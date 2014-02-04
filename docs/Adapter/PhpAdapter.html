@@ -134,8 +134,9 @@ td.docs .docparam {color:#DB251A;font-weight:bold;}   </style>
               <h3>PHP Adapter Class</h3>
 
 <p>Its job is to handle php code and create an array of
- code and comments from a php code file.
-<em class='docparam'>@author</em> Ross Riley</p>
+ code and comments from a php code file.</p>
+
+<p><em class='docparam'>@author</em> Ross Riley</p>
             </td>
             <td class="code">
               <div class="highlight"><pre><span class="k">class</span> <span class="nc">PhpAdapter</span>
@@ -218,9 +219,11 @@ td.docs .docparam {color:#DB251A;font-weight:bold;}   </style>
               </div>
               <h3>Main parsing method.</h3>
 
-<p>Uses the php tokenizer to separate comments from code
-<em class='docparam'>@return</em> <code>array</code>
-    array("code"=><code>array of code lines</code>, "docs"=><code>array of doc blocks</code>)</p>
+<p>Uses the php tokenizer to separate comments from code</p>
+
+<p><em class='docparam'>@return</em> <code>array</code></p>
+
+<p><code>array("code"=&gt;array of code, "docs"=&gt;array of docs)</code></p>
             </td>
             <td class="code">
               <div class="highlight"><pre>    <span class="k">public</span> <span class="k">function</span> <span class="nf">parse</span><span class="p">(</span><span class="nv">$file</span><span class="p">)</span>

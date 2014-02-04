@@ -257,7 +257,12 @@ td.docs .docparam {color:#DB251A;font-weight:bold;}   </style>
                     <span class="s2">&quot;folder&quot;</span><span class="o">=&gt;</span> <span class="nv">$iterator</span><span class="o">-&gt;</span><span class="na">getSubPath</span><span class="p">()</span>
                 <span class="p">);</span>
             <span class="p">}</span>
-        <span class="p">}</span></pre></div>            </td>
+        <span class="p">}</span>
+
+
+
+
+    <span class="p">}</span></pre></div>            </td>
           </tr>
                   <tr id="section-6">
             <td class="docs">
@@ -269,7 +274,8 @@ td.docs .docparam {color:#DB251A;font-weight:bold;}   </style>
 <p>Iterates over all found files and calls on the Phrocco class to render each file.</p>
             </td>
             <td class="code">
-              <div class="highlight"><pre>        <span class="k">foreach</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">group</span> <span class="k">as</span> <span class="nv">$name</span><span class="o">=&gt;</span><span class="nv">$file</span><span class="p">)</span> <span class="p">{</span>
+              <div class="highlight"><pre>    <span class="k">public</span> <span class="k">function</span> <span class="nf">write</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">foreach</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">group</span> <span class="k">as</span> <span class="nv">$name</span><span class="o">=&gt;</span><span class="nv">$file</span><span class="p">)</span> <span class="p">{</span>
             <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">sources</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">sources</span><span class="p">;</span>
             <span class="k">echo</span> <span class="s2">&quot;*** Processing: &quot;</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
             <span class="nv">$content</span> <span class="o">=</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">();</span>

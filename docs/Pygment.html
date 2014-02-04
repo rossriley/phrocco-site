@@ -133,7 +133,7 @@ td.docs .docparam {color:#DB251A;font-weight:bold;}   </style>
               </div>
               <h3>Pygment parser class.</h3>
 
-<p>This class simply proxies to two possible handlers, a local install of the Pygmentize gem.</p>
+<p>This class simply proxies to two possible handlers, a local install of the Pygmentize gem or a remote webservice.</p>
 
 <p>If the command line option is unavailable then it gets delegated to a web service.
  Obviously using the web service will require a net connection and may slow down the processing time.</p>
@@ -152,11 +152,11 @@ td.docs .docparam {color:#DB251A;font-weight:bold;}   </style>
               <p>This is the main method that returns the processed code, and decides whether to use
  a local gem or a remote web service.</p>
 
-<p><em class='docparam'>@param</em> string $language - The language parser to pass to pygmentize.</p>
+<p><em class='docparam'>@param</em> <code>string</code> $language - The language parser to pass to pygmentize.</p>
 
-<p><em class='docparam'>@param</em> string $code - The code to process</p>
+<p><em class='docparam'>@param</em> <code>string</code> $code - The code to process</p>
 
-<p><em class='docparam'>@return</em> void</p>
+<p><em class='docparam'>@return</em> <code>void</code></p>
             </td>
             <td class="code">
               <div class="highlight"><pre>    <span class="k">public</span> <span class="k">function</span> <span class="nf">pygmentize</span><span class="p">(</span><span class="nv">$language</span><span class="p">,</span> <span class="nv">$code</span><span class="p">)</span>
@@ -175,7 +175,7 @@ td.docs .docparam {color:#DB251A;font-weight:bold;}   </style>
 
 <p>If the pygmentize gem is available locally then we use this to parse the code.</p>
 
-<p><em class='docparam'>@return</em> string $parsed_code</p>
+<p><em class='docparam'>@return</em> <code>string</code> $parsed_code</p>
             </td>
             <td class="code">
               <div class="highlight"><pre>    <span class="k">public</span> <span class="k">function</span> <span class="nf">local_pygment</span><span class="p">(</span><span class="nv">$language</span><span class="p">,</span> <span class="nv">$code</span><span class="p">)</span>
@@ -227,7 +227,7 @@ td.docs .docparam {color:#DB251A;font-weight:bold;}   </style>
 
 <p>If the pygmentize gem is not available locally then we use a remote web serivce as a fallback.</p>
 
-<p><em class='docparam'>@return</em> string $parsed_code</p>
+<p><em class='docparam'>@return</em> <code>string</code> $parsed_code</p>
             </td>
             <td class="code">
               <div class="highlight"><pre>    <span class="k">public</span> <span class="k">function</span> <span class="nf">webservice</span><span class="p">(</span><span class="nv">$language</span><span class="p">,</span> <span class="nv">$code</span><span class="p">)</span>
